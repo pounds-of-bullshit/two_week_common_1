@@ -1,4 +1,2 @@
-import requests as rq
-
-def task2(client_ID):
-    None
+def task1(client_ID):
+    print("this is task 2")
