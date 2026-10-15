@@ -19,7 +19,7 @@ task_selection.geometry("350x200")
 task_selection.title("Task Selection")
 
 task1_btn = tk.Button(task_selection, text="Task 1", command=t1.task1(client_ID))  # input client_ID like this
-task2_btn = tk.Button(task_selection, text="Task 2", command=t2.task2())
+task2_btn = tk.Button(task_selection, text="Task 2", command=t2.task2(client_ID))
 task3_btn = tk.Button(task_selection, text="Task 3", command=t3.task3())
 task4_btn = tk.Button(task_selection, text="Task 4", command=t4.task4())
 task5_btn = tk.Button(task_selection, text="Task 5", command=t5.task5())

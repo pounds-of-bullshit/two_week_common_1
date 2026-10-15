@@ -1,3 +1,4 @@
-def task2():
+import requests as rq
+
+def task2(client_ID):
     None
-print(1)
