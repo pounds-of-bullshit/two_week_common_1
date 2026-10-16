@@ -1,4 +1,4 @@
-def task3():
+def task3(): 
 import pandas as pd
 import matplotlib.pyplot as plt
 import requests
