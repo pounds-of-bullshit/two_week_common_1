@@ -9,28 +9,28 @@ import task5 as t5
 
 # updated so that it now also destroys the main index menu
 def task1_selection():
-    t1.task1(client_ID)
     task_selection.destroy()
+    t1.task1(client_ID)
 
 
 def task2_selection():
-    t2.task2(client_ID)
     task_selection.destroy()
+    t2.task2(client_ID)
 
 
 def task3_selection():
-    t3.task3(client_ID)
     task_selection.destroy()
+    t3.task3(client_ID)
 
 
 def task4_selection():
-    t4.task4(client_ID)
     task_selection.destroy()
+    t4.task4(client_ID)
 
 
 def task5_selection():
-    t5.task5(client_ID)
     task_selection.destroy()
+    t5.task5(client_ID)
 
 
 hey1 = mp.meto_login()

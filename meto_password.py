@@ -11,9 +11,6 @@ def meto_login() -> list:
         client_ID_var = client_ID.get()
         client_secret_var = client_secret.get()
 
-        print(client_ID_var)
-        print(client_secret_var)
-
         try:
             endpoint = 'https://frost.met.no/observations/v0.jsonld'
             parameters = {
