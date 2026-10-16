@@ -5,3 +5,5 @@
 /.touke1
 
 /task
+
+.venv/
