@@ -1,3 +1,3 @@
 # Title
 
-Run met_index.py to start the script.
+Run meto_index.py to start the script.
