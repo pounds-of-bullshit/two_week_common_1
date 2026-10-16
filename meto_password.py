@@ -9,7 +9,6 @@ def meto_login() -> list:
     def submit() -> None:
 
         client_ID_var = client_ID.get()
-        client_secret_var = client_secret.get()
 
         try:
             endpoint = 'https://frost.met.no/observations/v0.jsonld'
@@ -47,15 +46,11 @@ def meto_login() -> list:
     client_ID_entry = tk.Entry(id_input, textvariable=client_ID,
                                font=("Arial", 10))
 
-    client_secret_entry = tk.Entry(id_input, textvariable=client_secret,
-                                   font=("Arial", 10), show="*")
-
     sub_btn = tk.Button(id_input, text="Submit", command=submit)
 
     label.grid(row=0)
     client_ID_entry.grid(row=1)
-    client_secret_entry.grid(row=2)
-    sub_btn.grid(row=3)
+    sub_btn.grid(row=2)
 
     id_input.mainloop()
 
