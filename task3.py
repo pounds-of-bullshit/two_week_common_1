@@ -28,9 +28,16 @@ def task3(client_ID):
     task1_data_list = t1.task1_data(client_ID)
     task3_data_list = task3_data(client_ID)
 
-    plt.plot(task1_data_list, label="Temperature 2025")
-    plt.plot(task3_data_list, label="Temperature 1925")
+    plt.plot(task1_data_list, label="2025")
+    plt.plot(task3_data_list, label="1925", color="red")
+
+    plt.title("Daily mean temperature in Ås (1925 vs 2025)")
+    plt.xlabel("Day of year")
+    plt.ylabel("Temperature (°C)")
+    plt.axhline(0, color="black", linestyle="--", linewidth=1)
+    plt.grid(True, alpha=0.3)
     plt.legend()
+    plt.tight_layout()
     plt.show()
 
     summary_table = tk.Tk()
@@ -39,7 +46,7 @@ def task3(client_ID):
     summary_table.geometry("350x200")
 
     tk.Label(summary_table,
-             text="Temperature summary table",
+             text="Temperature summary statistics for Ås (1925 vs 2025):",
              font=("Arial", 10)).grid(row=1, column=1)
 
     tk.Label(summary_table,

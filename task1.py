@@ -27,6 +27,12 @@ def task1(client_ID):
     data_list = task1_data(client_ID)
 
     # plot the data
+    plt.title("Daily mean temperature in Ås (2025)")  # Adds the title
+    plt.xlabel("Time")  # Labels the x-axis
+    plt.ylabel("Temperature (°C)")  # The y-axis 
+    plt.axhline(0, color="black", linestyle="--", linewidth=1)  # Adds a horizontal line at 0°C
+    plt.grid(True, alpha=0.3)  # Adds grid lines
+    plt.tight_layout()  # Adjusts the layout to prevent overlaping
     plt.plot(data_list)
     plt.show()
 
@@ -37,7 +43,7 @@ def task1(client_ID):
     summary_table.geometry("350x200")
 
     tk.Label(summary_table,
-             text="Task 1 summary table",
+             text="Temperature summary statistics for Ås (2025):",
              font=("Arial", 10)).grid(row=1)
     tk.Label(summary_table,
              text=f"Mean: {np.mean(data_list):.1f}",

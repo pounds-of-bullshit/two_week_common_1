@@ -1,4 +1,5 @@
 import requests as rq
+import yaml
 
 
 def task4_data(client_ID: str) -> list:
@@ -41,3 +42,13 @@ def task4(client_ID):
         end_date_string = f"{end_date[0]+end_date[1]+end_date[2]+end_date[3]+end_date[4]+end_date[5]+end_date[6]+end_date[7]+end_date[8]+end_date[9]}"
 
         print_date_list.append([start_date_string, end_date_string])
+
+    year = f"{start_date[0]+start_date[1]+start_date[2]+start_date[3]}"
+
+    # Creates a summary dictionary with the results
+    summary = {"dates": print_date_list, "station_id": "SN17850", "year": year}
+
+    # Opens a YAML file to write "w" the summary data, and then closes it
+    heatwaves_file = open("heatwaves.yml", "w", encoding="utf-8")
+    yaml.safe_dump(summary, heatwaves_file, sort_keys=False)
+    heatwaves_file.close()
